@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=en">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400&amp;lang=en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../static/style.css"/>
+
+    <title>Coffee </title>
+    
+</head>
+<body>
+    <nav id="navigation">
+        <div class="logo">
+            <div class = "image">
+            <img src="../static/image/lf-white-64-5de912404ea117f6042353e04558a303900427e056c0af64c4e8c07e194bb24c.png" alt=""/>
+            </div>
+            <div class = "logo-text">
+                <p>Cafe Search</p>
+            </div>
+        </div>
+        <div class ="real_nav">
+            <a>Filter</a> |
+            
+        </div>
+    </nav>
+    <div id ="wrapper">  
+        <div id="container">
+                <div id="left">
+                    <div class ="pro"><h2>Filter</h2>
+                    </div>
+                    <div id="producitivity">
+                        <div class ="features">
+
+                            <a href="{{url_for('data' , value = 'has_wifi')}}">
+                                    <i class="fa fa-wifi"></i>
+                                    <p>Wi-Fi </p>
+                            </a>
+                        </div>
+
+                        <div class ="features">
+                            <a href="{{url_for('data' , value = 'has_sockets')}}">
+                                <i class="fa fa-plug"></i>
+                                <p>Sockets </p>
+                            </a>
+                        </div>
+
+                        <div class ="features">
+                            <a href="{{url_for('data' , value = 'has_toilet')}}">
+                                <i class="fa fa-clock-o"></i>
+                                <p>Toilet </p>
+                            </a>
+                        </div>
+
+
+                        <div class ="features">
+                            <a href="{{url_for('data' , value = 'can_take_calls')}}">
+                                <i class=" fa fa-pencil-square-o"></i>
+                                <p>Call </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="middle">
+                    <div>
+                        
+                        <p>The best work and study-friendly cafes, restaurants, libraries, and hotel lobbies in London. Find venues with free and reliable Wi-Fi hotspots, ample power sockets, and comfy seating areas.My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p><br><br>
+                        <h2>{{data|count}} WORK-FRIENDLY PLACES</h2> 
+                        <h2 style="margin-bottom:50px">London</h2>
+                    </div>
+                    {% for i in data %}
+                    <div class = "empty">
+                        <div class="cafe">
+
+                            <div class="picture">
+                                <img src="{{i.img_url}}">
+
+                            </div>
+                            <div class="details">
+                                <div class="addrerss">
+                                    <p> {{ i.name}}</p>
+                                    <p id = "operation-time"> <i class="fa fa-clock-o"></i> 8:00-16:00</p>
+                                    <p> <i class="fa fa-location-arrow"></i><a href = "{{i.map_url}}">{{i.location}}"</a></p>
+                                </div>
+
+                                <div class = "all-rating">
+
+                                    <div class="rating">
+                                        <p> £: {{i.coffee_price}}</p>
+                                    </div>
+                                    <div class =" user-rating">
+                                        <p>Seats: {{i.seats}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../static/script.js"></script>
+
+    <footer>
+        <p>@copyRight Sanjeev 2024</p>
+
+    </footer>
+</body>
+
+
+</html>

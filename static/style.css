@@ -1,0 +1,248 @@
+*{
+    font-family: roboto;
+    font-size: 16px;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0px;
+    width: 100vw;
+}
+
+.logo{
+    margin-left: 20px;
+    display: flex; 
+    align-items: center;  
+    color: white;
+    gap: 15px;
+}
+
+
+.image  img{
+    max-height: 30px;
+    align-self: center;   
+}
+
+
+#navigation{
+    margin-bottom: 40px;
+    display: flex;
+    height:50px;
+    background-color: #343434;
+    justify-content:space-between;
+    position: fixed;
+    width: 100vw;
+
+}
+
+#wrapper{
+    padding-top: 60px;
+    width: 100vw;
+}
+.real_nav{
+    font-size: 0.8rem;
+    padding-top:15px ;   
+}
+
+.real_nav a{
+    
+    text-decoration: none; 
+    margin-right:15px;
+    color: white;  
+}
+
+
+
+#container{
+    padding:20px;
+}
+
+#header{
+    display:flex;
+    justify-content: space-between;
+   
+}
+
+.picture{
+    width: 25%;
+}
+
+
+
+
+#producitivity{
+    display: flex;  
+    
+
+    
+}
+
+.features{
+    padding-top: 12px;
+    margin: 6px;
+    width:80px;
+    border:none;
+    background-color: white;
+    text-align: center;
+    
+}
+
+.features a{
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: 0px;
+
+    
+}
+.features:hover  {
+    background-color: black;
+    border-radius: 10px;
+}
+
+.features:hover a{
+    color: white;
+}
+
+
+
+.features p{
+    margin-top: 2px;
+    font-size: 0.8rem;
+}
+
+
+.cafe{
+   display:flex;
+   margin-bottom:30px;
+}
+
+.picture img{
+    max-width :25vw;
+    min-width: 25vw;
+    min-height: 80px;
+    max-height: 80px;
+    
+}
+
+.details{
+    padding-left: 20px;
+    display: flex;
+    width:70%;
+    justify-content: space-between;
+    
+}
+
+.all-rating{
+    align-content:end;
+
+}
+
+.rating{
+    text-align: end;
+}
+
+.all-rating p{
+    font-size: 0.86rem;
+}
+
+.user-rating{
+    text-align: end;
+}
+
+.details p {
+    margin: 0px ;
+
+}
+
+.addrerss{
+    align-self: start;
+}
+
+
+
+.addrerss p {
+    font-size: 0.86rem;
+    font-weight: 400;
+    
+  }
+
+.addrerss a {
+    font-size: 0.76rem;
+}
+
+#operation-time{
+    font-size: 0.76rem;
+    font-weight: 400;
+}
+
+footer{
+    color:white;
+    font-size: .85rem;
+    background-color: #343434;
+    height: 100px;
+    text-align: center;
+
+}
+
+
+footer p{
+    padding-top: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    *{
+        font-size: 18px;
+    }
+
+    #container{
+        display: flex;
+        gap:30px;
+    
+    }
+
+    #left{
+        width: 20vw;
+        align-self: self-start;
+        
+        
+       
+        
+    }
+
+    #middle{
+        width: 75%;
+        align-self: center;
+       
+
+    }
+        
+
+   
+
+    #producitivity{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .picture img{
+        max-width :25vw;
+        min-width: 25vw;
+        min-height: 180;
+        max-height: 180px;
+        
+    }
+
+    .cafe{
+        display:flex;
+        gap: 80px;
+        margin-bottom:30px;
+     }
+
+
+
+}
+
